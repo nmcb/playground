@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class OfferTest {
 
     @Test
-    public void testOfferRemainingValue() {
+    public void getUnfulfilledValue() {
         Offer offer = new Offer(100);
         offer.addQuotes(25, 25, 25, 5);
 
