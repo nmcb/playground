@@ -24,6 +24,9 @@ public class OfferTest {
         offer.addVouchers(30);
         assertEquals(new Double(40), offer.getUnfulfilledValue());
 
+        offer.addVouchers(30);
+        assertEquals(new Double(25), offer.getUnfulfilledValue());
+
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         System.out.print(gson.toJson(offer));
     }
