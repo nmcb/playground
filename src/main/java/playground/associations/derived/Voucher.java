@@ -1,4 +1,4 @@
-package playground;
+package playground.associations.derived;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +29,7 @@ public class Voucher {
 
     public Double getRemainingValue() {
         double remaining = getValue();
-        for (Double applied : appliedTo.values())  {
+        for (Double applied : appliedTo.values()) {
             remaining -= applied;
         }
         return remaining;

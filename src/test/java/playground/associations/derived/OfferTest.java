@@ -1,4 +1,4 @@
-package playground;
+package playground.associations.derived;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

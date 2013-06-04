@@ -1,4 +1,4 @@
-package playground;
+package playground.associations.derived;
 
 import java.util.LinkedList;
 import java.util.List;

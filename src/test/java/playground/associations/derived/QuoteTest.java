@@ -1,4 +1,4 @@
-package playground;
+package playground.associations.derived;
 
 import org.junit.Test;
 
