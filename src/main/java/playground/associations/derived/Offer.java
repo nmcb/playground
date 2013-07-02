@@ -12,9 +12,9 @@ public class Offer {
 
     private List<Voucher> vouchers = new LinkedList<Voucher>();
 
-    private static AtomicInteger qi = new AtomicInteger(0);
+    private static AtomicInteger quoteCounter = new AtomicInteger(0);
 
-    private static AtomicInteger vi = new AtomicInteger(0);
+    private static AtomicInteger voucherCounter = new AtomicInteger(0);
 
     public Offer(double totalValue) {
         this.totalValue = totalValue;
@@ -22,13 +22,15 @@ public class Offer {
 
     public void addQuotes(double... quotes) {
         for (double quote : quotes) {
-            this.quotes.add(new Quote("q-" + qi.incrementAndGet(), quote));
+            String name = String.format("quote-%05d", quoteCounter.incrementAndGet());
+            this.quotes.add(new Quote(name , quote));
         }
     }
 
     public void addVouchers(double... vouchers) {
         for (double voucher : vouchers) {
-            this.vouchers.add(new Voucher("v-" + vi.incrementAndGet(), voucher));
+            String name = String.format("voucher-%05d", voucherCounter.incrementAndGet());
+            this.vouchers.add(new Voucher(name, voucher));
         }
     }
 
